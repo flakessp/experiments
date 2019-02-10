@@ -32,14 +32,17 @@ section {
   margin: 0;
   flex-direction: column;
   height: 100vh;
-  /* background:url(../assets/3/os_movie_cover.svg) repeat-y 0 / auto 100%; */
-  background-image: url(../assets/3/os_movie_cover.svg);
+  background-image: url(/salad/os_movie_cover.svg);
   background-position: 0 20vh;
-  /* background-size: 100% 200%; */
   background-size: cover;
-  /* background-repeat: repeat-y; */
 	animation: salad 10s linear infinite ;
   transition: transform 3s;
+}
+
+@media screen and (max-width:1500px) {
+  section {
+    background-size: contain;
+  }
 }
 
 section:nth-child(1) {
