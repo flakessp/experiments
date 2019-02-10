@@ -1,5 +1,5 @@
 <template>
-  <div class="container" @click="clickMe">
+  <div class="container-" @click="clickMe">
     
       <salad-over v-for="item in 4" :key="item"></salad-over>
       <figure>
@@ -45,7 +45,7 @@ import saladOver from '~/components/saladSection.vue'
 </script>
 
 <style scoped>
-.container {
+.container- {
   display: flex;
   position: relative;
 }

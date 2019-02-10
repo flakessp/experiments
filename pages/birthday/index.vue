@@ -106,7 +106,7 @@ export default {
     waffle.style.position = 'absolute';
 
     setInterval( this.calculateDecimalDifference, 50 );
-    if(this.window.width > 700){ requestAnimationFrame(this.dvdLogo) } 
+    if (this.window.width > 700){ requestAnimationFrame(this.dvdLogo) } 
     else { setInterval(this.mobileGyroHandler, this.m.delay) }
 
   }, computed: {
@@ -121,6 +121,4 @@ export default {
 }
 </script>
 
-<style>
-@import '~/assets/birthday.css';
-</style>
+<style  src="~/assets/birthday.css">

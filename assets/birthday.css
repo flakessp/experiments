@@ -2,18 +2,15 @@
   font-family: 'italic';
   src: url('/birthday/italic.woff') format('woff');
 }
-:root {
+html {
   --main-color: #EF6701;
   --waffle-width: 660px;
-  /* font-size: 3vw; */
 }
 
 * {
   box-sizing: border-box;
 }
-html {
-  /* cursor: none; */
-}
+
 body {
   margin: 0;
   font: 30px 'PT Mono';
