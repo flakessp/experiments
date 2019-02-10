@@ -113,6 +113,7 @@ p {
 
 .emoji {
   color: inherit;
+  mix-blend-mode: color-dodge;
 }
 
 /* big screens */
@@ -121,7 +122,9 @@ p {
      font-size: 40px;
   }
 }
-
+.text-shadow {
+  text-shadow: 2px 5px 0px #000000fa;
+}
 /* mobile */
 @media screen and (max-width: 650px) {
   :root {
@@ -129,5 +132,13 @@ p {
   }
   .date-inner p {
     font-size: 17px !important;
+  }
+  .text-shadow {
+    text-shadow: none;
+  }
+  .date-container {
+    display: flex;
+    padding: 45px;
+    line-height: 1.6;
   }
 }

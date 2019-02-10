@@ -8,18 +8,14 @@
       <div class="date-container" ref="waffleInner">
           <div class="date-inner">
             <p>  рис</p>
-            <p class="emoji" style="
-            mix-blend-mode: color-dodge;">🌞</p>
+            <p class="emoji" >🌞</p>
             <p > день рождения</p>
-            <p class="emoji" style="
-            mix-blend-mode: color-dodge;">🥳</p>
-            <p style="text-shadow: 2px 5px 0px #000000fa;">11.02
+            <p class="emoji" >🥳</p>
+            <p class="text-shadow">11.02
             <br>11:00-23:00</p>
-            <p class="emoji" style="
-            mix-blend-mode: color-dodge;">👇👇</p>
-            <p style="text-shadow: 2px 5px 0px #000000fa;">Пятницкая 59/19С5 </p>
-            <p class="emoji" style="
-            mix-blend-mode: color-dodge;">👆👆</p>
+            <p class="emoji" >👇👇</p>
+            <p class="text-shadow">Пятницкая 59/19С5 </p>
+            <p class="emoji">👆👆</p>
             <p>ВафлиВафлиВафли</p>
           </div>
       </div>
