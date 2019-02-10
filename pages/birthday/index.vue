@@ -30,8 +30,10 @@
 
 <script>
 import moment from 'moment';
+import { windowHW } from '~/mixins/windowHW';
 
 export default {
+  mixins: [windowHW],
   data() {
     return {
       x: 0,
