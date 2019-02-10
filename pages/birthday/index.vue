@@ -4,8 +4,8 @@
       <div class="container-inner" id="output">
           <p v-for="i in 14" :key=i>{{timeString.toString().split('').slice(0,i+1).join('')}}</p>
         </div>
-    <div class="waffle-container" :style="moveStyles">
-      <div class="date-container">
+    <div class="waffle-container" ref="waffle" >
+      <div class="date-container" ref="waffleInner">
           <div class="date-inner">
             <p>  рис</p>
             <p style="
@@ -41,6 +41,14 @@ export default {
       now: null,
       BD: moment('1990-02-11'),
       timeString: '',
+      waffleH: 0,
+      waffleW: 0,
+      xSpeed: 3.5,
+      ySpeed: 3.5,
+      waffleX: 0,
+      waffleY: 0,
+      mixBlendModes2: ['normal', 'multiply', 'screen', 'overlay', 'darken', 'lighten', 'color-dodge', 'color-burn', 'hard-light', 'soft-light', 'difference', 'exclusion', 'hue', 'saturation', 'color', 'luminosity'],
+      mixBlendModes: ['darken', 'difference', 'exclusion', 'hard-light', 'luminosity', 'multiply', 'normal'] 
     }
   },
   methods: {
@@ -52,10 +60,39 @@ export default {
       this.now = moment();
       this.timeString = this.now.diff(this.BD, 'years', true);
     },
+    dvdLogo() {
+      let waffle = this.$refs.waffle;
+      this.waffleX += this.xSpeed;
+      this.waffleY += this.ySpeed;
+      waffle.style.left = this.waffleX  + 'px';
+      waffle.style.top = this.waffleY  + 'px';
+
+      if (this.waffleX + this.waffleW > this.window.width || this.waffleX == 0) {
+        this.xSpeed *= -1;
+        this.hitOccurs();
+      }
+      if (this.waffleY + this.waffleH > this.window.height || this.waffleY == 0) {
+        this.ySpeed *= -1;
+        this.hitOccurs();
+      }
+      requestAnimationFrame(this.dvdLogo);
+    },
+    hitOccurs() {
+      let waffle = this.$refs.waffleInner;
+      waffle.style.mixBlendMode = this.mixBlendModes[Math.floor(Math.random()*(this.mixBlendModes.length-1))];
+    }
+
   },
   mounted() {
+    // get ref dimensions
+    let waffle = this.$refs.waffle;
+    this.waffleH = waffle.clientHeight;
+    this.waffleW = waffle.clientWidth;
+
+    waffle.style.position = 'absolute';
 
     setInterval(this.calculateDecimalDifference, 50);
+    requestAnimationFrame(this.dvdLogo);
 
   }, computed: {
     moveStyles: function() {

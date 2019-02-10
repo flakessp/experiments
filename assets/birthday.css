@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 html {
-  cursor: none;
+  /* cursor: none; */
 }
 body {
   margin: 0;
@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #ff8427;
+  background: var(--main-color);
   position: relative;
 }
 
@@ -57,6 +57,7 @@ p {
 .waffle-container {
   width: var(--waffle-width);
   position: relative;
+  transition: .1s;
 }
 .waffle-container img{
   transform: scaleX(-1);
