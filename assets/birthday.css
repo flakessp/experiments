@@ -5,7 +5,9 @@
 :root {
   --main-color: #EF6701;
   --waffle-width: 660px;
+  /* font-size: 3vw; */
 }
+
 * {
   box-sizing: border-box;
 }
@@ -34,10 +36,11 @@ body {
   left: 50%;
   transform: rotate(2deg) translate(-50%, -50%);
   width: 70%; 
-  height: 60%;
   background: #0000001f;
   padding: 30px;
-  
+}
+.container-inner p {
+  font-size: 3vw;
 }
 
 img {
@@ -105,7 +108,26 @@ p {
   font-size: 1.65rem;
 }
 .date-inner {
-  /* transform: rotate(-90deg); */
-  
   font-family: 'italic', sans-serif;
+}
+
+.emoji {
+  color: inherit;
+}
+
+/* big screens */
+@media screen and (min-width: 1200px) {
+  .container-inner p {
+     font-size: 40px;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 650px) {
+  :root {
+    --waffle-width: 400px;
+  }
+  .date-inner p {
+    font-size: 17px !important;
+  }
 }

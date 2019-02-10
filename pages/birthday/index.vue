@@ -8,17 +8,17 @@
       <div class="date-container" ref="waffleInner">
           <div class="date-inner">
             <p>  рис</p>
-            <p style="
+            <p class="emoji" style="
             mix-blend-mode: color-dodge;">🌞</p>
             <p > день рождения</p>
-            <p style="
+            <p class="emoji" style="
             mix-blend-mode: color-dodge;">🥳</p>
             <p style="text-shadow: 2px 5px 0px #000000fa;">11.02
             <br>11:00-23:00</p>
-            <p style="
+            <p class="emoji" style="
             mix-blend-mode: color-dodge;">👇👇</p>
             <p style="text-shadow: 2px 5px 0px #000000fa;">Пятницкая 59/19С5 </p>
-            <p style="
+            <p class="emoji" style="
             mix-blend-mode: color-dodge;">👆👆</p>
             <p>ВафлиВафлиВафли</p>
           </div>
@@ -92,7 +92,9 @@ export default {
     waffle.style.position = 'absolute';
 
     setInterval(this.calculateDecimalDifference, 50);
-    requestAnimationFrame(this.dvdLogo);
+    if(this.window.width > 700){
+      requestAnimationFrame(this.dvdLogo);
+    } 
 
   }, computed: {
     moveStyles: function() {
