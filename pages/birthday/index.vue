@@ -27,15 +27,16 @@
 <script>
 import moment from 'moment';
 import { windowHW } from '~/mixins/windowHW';
+import { mobileGyro } from '~/mixins/mobileGyro'
 
 export default {
-  mixins: [windowHW],
+  mixins: [windowHW, mobileGyro],
   data() {
     return {
       x: 0,
       y: 0,
       now: null,
-      BD: moment('1990-02-11'),
+      BD: moment('1990-02-11 11:00'),
       timeString: '',
       waffleH: 0,
       waffleW: 0,
@@ -76,6 +77,23 @@ export default {
     hitOccurs() {
       let waffle = this.$refs.waffleInner;
       waffle.style.mixBlendMode = this.mixBlendModes[Math.floor(Math.random()*(this.mixBlendModes.length-1))];
+    },
+    mobileGyroHandler() {
+      this.m.vy = this.m.vy + -(this.m.ay);
+      this.m.vx = this.m.vx + this.m.ax;
+
+      const WAFFLE = this.$refs.waffle;
+      
+      this.m.y = parseInt(this.m.y + this.m.vy * this.m.vMultiplier);
+      this.m.x = parseInt(this.m.x + this.m.vx * this.m.vMultiplier);
+      
+      if (this.m.x<0) { this.m.x = 0; this.m.vx = 0; }
+      if (this.m.y<0) { this.m.y = 0; this.m.vy = 0; }
+      if (this.m.x>this.window.width-this.waffleW) { this.m.x = this.window.width-this.waffleW; this.m.vx = 0;this.hitOccurs() }
+      if (this.m.y>this.window.height-this.waffleH) { this.m.y = this.window.height-this.waffleH; this.m.vy = 0;this.hitOccurs() }
+      
+      WAFFLE.style.top = this.m.y + "px";
+      WAFFLE.style.left = this.m.x + "px";
     }
 
   },
@@ -87,20 +105,18 @@ export default {
 
     waffle.style.position = 'absolute';
 
-    setInterval(this.calculateDecimalDifference, 50);
-    if(this.window.width > 700){
-      requestAnimationFrame(this.dvdLogo);
-    } 
+    setInterval( this.calculateDecimalDifference, 50 );
+    if(this.window.width > 700){ requestAnimationFrame(this.dvdLogo) } 
+    else { setInterval(this.mobileGyroHandler, this.m.delay) }
 
   }, computed: {
-    moveStyles: function() {
+    moveStyles() {
       return {
         position: 'absolute',
         top: `${this.y}`,
         left: `${this.x}`
       }
     }
-  
   }
 }
 </script>
