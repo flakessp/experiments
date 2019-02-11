@@ -122,7 +122,9 @@ export default {
 head () {
     return {
       meta: [
-        { hid: 'og-image', property: 'og-image', content: this.prodBaseUrl + socialImage }
+        { hid: 'image', property: 'og:image', content: this.prodBaseUrl + socialImage },
+        { hid: 'description', property: 'og:description', content: '29! RIS x VAFLI !29 '}
+        
       ]
     }
   },
