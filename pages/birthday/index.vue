@@ -28,6 +28,7 @@
 import moment from 'moment';
 import { windowHW } from '~/mixins/windowHW';
 import { mobileGyro } from '~/mixins/mobileGyro'
+import socialImage from '~/static/birthday/media.jpg'
 
 export default {
   mixins: [windowHW, mobileGyro],
@@ -117,6 +118,16 @@ export default {
         left: `${this.x}`
       }
     }
+  },
+head () {
+    return {
+      meta: [
+        { hid: 'og-image', property: 'og-image', content: this.prodBaseUrl + socialImage }
+      ]
+    }
+  },
+  created: function () {
+    this.prodBaseUrl = 'https://ris.netlify.com'
   }
 }
 </script>
