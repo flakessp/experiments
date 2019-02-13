@@ -123,6 +123,7 @@ head () {
     return {
       meta: [
         { hid: 'image', property: 'og:image', content: this.prodBaseUrl + socialImage },
+        { hid: 'image', property: 'og:image:url', content: this.prodBaseUrl + socialImage },
         { hid: 'description', property: 'og:description', content: '29! RIS x VAFLI !29 '}
         
       ]
