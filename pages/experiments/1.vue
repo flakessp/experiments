@@ -26,6 +26,7 @@ export default {
     position: relative;
   }
   .container div{
+    font-family:'Times New Roman', Times, serif;
     font-size: 160px;
     text-transform: uppercase;
     -webkit-text-stroke: 2px white;
