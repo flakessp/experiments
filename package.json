@@ -19,7 +19,8 @@
   "dependencies": {
     "cross-env": "^5.2.0",
     "moment": "^2.24.0",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "p5": "^0.7.3"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
