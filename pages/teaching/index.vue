@@ -1,97 +1,109 @@
 <template>
   <div class="container">
-    <div class="slide slide_centered">
-      <div class="window-small">HASHSLASH / INTERNET 101</div>
+    <div class="slide slide_vh-centered">
+      <div class="window-small heading  ">HASHSLASH / INTERNET 101</div>
       <div class="pop-out img-earth"><img src="/teaching/world.gif" alt=""></div>
     </div>
-    
-    <div class="slide slide_centered">
-      <div class="window-small">ГДЕ Я Сейчас мы здесь (шкала из занятий)</div>
-    </div>
 
-    <div class="slide">
-      <div class="window-small">Что мы изучим на курсе?</div>
+    <div class="slide slide_vh-centered">
+      <div class="window-small heading">🤓 Курикулум </div>
+      <div class="window-small"><a href="https://readymag.com/serejaris/snowmen-1/" target="_blank">Слайды</a></div>
         <div>
           <div class="window-small window-img-wrapper" v-for="i in 4" :key="i"><img :src="`/teaching/${i}.png`" alt=""></div>
         </div>
+        
     </div>
-    
-    <div class="slide">
-      <div class="window-small">Какие бывают языки программирования?</div>
+
+    <div class="slide slide_vh-centered">
+      <div class="window-small heading">Инструменты</div>
       <div>
-        <div class="window-small">Frontend</div>
-        <div class="window-small">Backend</div>
-      </div>
-    </div>
-
-    <div class="slide">
-      <div class="window-small">Знакомство с инфраструкторой </div>
-      <div class="window-small">спиcок инструментов</div>
-      <div class="window-small">terminal / cmd</div>
-    </div>
-
-    <div class="slide">
-      <div class="window-small">VS Code</div>
-      <div class="window-small window-img-wrapper">
-        <img src="/teaching/vscode.png" alt="">
-      </div>
-    </div>
-
-    <div class="slide">
-      <div>
+        <div class="window-small">VS Code</div>
         <div class="window-small">Chrome</div>
-        <div class="window-small window-img-wrapper">
-          <img src="/teaching/chrome.png" alt="">
+        <div class="window-small">Git</div>
+        <div class="window-small">terminal / cmd</div>
+      </div>
+    </div>
+
+
+    <div class="slide slide_vh-centered">
+      <div class="window-small">VS Code</div>
+      <div class=" window-img-wrapper_medium pop-out">
+        <a href="https://code.visualstudio.com/" target="_blank">
+          <img src="/teaching/vscode.png" alt="">
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="slide slide_vh-centered">
+      <div>
+        <div class="window-small heading">Chrome</div>
+        <div class="window-img-wrapper_medium">
+          <a href="https://www.google.com/chrome/canary/" target="_blank">
+            <img src="/teaching/chrome.png" alt="">
+          </a>
         </div>
       </div>
       <div class="window-small">Chrome Developer Tools</div>
       <div class="window-small">Поиск проблем (дебаггинг) / Протипирование</div>
-      <div class="window-small">
-        фаст-таск: ломаем твитер https://twitter.com/kanyewest
-        адванс - дефейс хз чего
+      <div class="window-small font-task">
+        фаст-таск: улучшаем твитер <a href="https://twitter.com/kanyewest">Йе</a>
       </div>
     </div>
     
-    <div class="slide">
-      <div class="window-small">Git</div>
+    <div class="slide slide_vh-centered ">
+      <div class="window-small heading">Git</div>
       <div class="window-small">технология</div>
+      <div class="window-small"><a href="https://github.com/">Github</a></div>
       <div class="window-small">зачем это нужно?</div>
       <div class="window-small">Github Desktop</div>
+      <div class="window-img-wrapper_medium pop-out">
+        <a href="https://desktop.github.com" target="_blank"><img src="/teaching/github.png" alt=""></a>
+      </div>
+    </div>
+
+    <div class="slide slide_vh-centered">
+      <div class="window-img-wrapper_medium"><img src="/teaching/baby.gif" alt=""></div>
+      <div class="window-img-wrapper_medium"><img src="/teaching/helloworld.gif" alt=""></div>
+      <div class="window-img-wrapper_medium"><img src="/teaching/website.gif" alt=""></div>
+    </div>
+
+        
+    <div class="slide slide_vh-centered">
+      <div class="window-small heading">Языки программирования</div>
+      <div>
+        <div class="window-small">🚀 Frontend 🚀</div>
+        <div class="window-small">🔞 Backend 🔞</div>
+      </div>
     </div>
   
-    <div class="slide">
-      <div class="window-small">История веб</div>
-      <div class="window-small">фаст таск -  curl wttr.in/moscow</div>
+    <div class="slide slide_vh-centered">
+      <div class="window-small heading">История веб</div>
       <div class="window-small">браузеры</div>
-      <div class="window-small">тим бернерс ли</div>
+      <div class="window-small font-task">фаст таск -  curl wttr.in/moscow</div>
+      <div class="window-small">Тим Бернерс-Ли</div>
       <div class="window-small">W3C</div>
     </div>
     
-    <div class="slide">
+    <div class="slide slide_vh-centered">
+      <div class="window-small heading">Структура</div>
       <div class="window-small">Линейные / блочные теги</div>
       <div class="window-small">тег / атрибут </div>
       <div class="window-small">устройство страницы, базовые теги</div>
       <div class="window-small">div, span, a, h1, p, img </div>
     </div>
 
-    <div class="slide">
-      <div class="window-small">Как работает интернет</div>
+    <div class="slide slide_vh-centered">
+      <div class="window-small heading">Как работает интернет</div>
       <div class="window-small">сетевые запросы</div>
-      <div class="window-small">почему index.html</div>
-      <div class="window-small">как раотает DNS</div>
+      <div class="window-small">index.html - это почему?</div>
+      <div class="window-small">как работает DNS</div>
 
-      <div class="window-small">фаст таск - проверить путь до яндекса - traceroute / tracert</div>
+      <div class="window-small font-task">проверить путь до яндекса - traceroute / tracert</div>
     </div>
     
-
-    <div class="slide">
-      <div class="window-small">Медиа файлы</div>
-      <div class="window-small">картинки</div>
-      <div class="window-small">аудио</div>
-      <div class="window-small">видео</div>
-    </div>
-
-    <div class="slide">
+    <!-- <div class="slide">
       <div class="window-small">
       первый проект
       «Свидетели HTML»
@@ -108,10 +120,13 @@
       - Егор Летов
       - Чихольд 
       </div>
-    </div>
+    </div> -->
 
-    <div class="slide">
+    <div class="slide slide_vh-centered">
       <div class="window-small">конец первого занятия! (9 впереди)</div>
+      <div class="pop-out img-baby">
+        <img src="/teaching/wow.gif" alt="">
+      </div>
     </div>
   </div>
 </template>
@@ -138,7 +153,7 @@ $color-bg: $secondary-color;
 $color-text: $base-color;
 $color-highlight: $third-color;
 $color-shadow: $third-color;
-
+$link-color: $third-color;
 
 .container {
   min-height: 100vh;
@@ -146,14 +161,28 @@ $color-shadow: $third-color;
   color: $base-color;
   font-family: 'Aeroport', sans-serif;
   font-size: 50px;
+  cursor: url("/teaching/cursor.png"), auto;
+
 }
 .slide {
   min-height: 100vh;
   position: relative;
+  border-bottom: 3px dashed $base-color;
 
-  &_centered {
+  &_vh-centered {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &_h-centered {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &_v-centered {
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
   }
 }
@@ -179,6 +208,11 @@ $color-shadow: $third-color;
   img {
     max-width: 300px;
   }
+  &_medium {
+    img {
+      max-width: 600px;
+    }
+  }
 }
 
 .pop-out {
@@ -190,6 +224,39 @@ $color-shadow: $third-color;
     transform: scale(4);
     mix-blend-mode: saturation;
   }
+  &-baby {
+    transform: scale(3);
+    mix-blend-mode: saturation;
+  }
 }
+
+.heading {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.font-task {
+  font-style: italic;
+  font-size: .8em;
+}
+
+a {
+  color: $link-color;
+  cursor: inherit;
+  transition: .3s;
+  &:hover {
+    color: inherit;
+  }
+  img {
+    filter: grayscale(100%);
+    transition: .3s;
+    &:hover {
+      filter: none;
+    }
+  }
+}
+
+
+
 
 </style>
