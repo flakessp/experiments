@@ -122,6 +122,8 @@
       </div>
     </div> -->
 
+    <!-- дз Ж по сайту в день -->
+
     <div class="slide slide_vh-centered">
       <div class="window-small">конец первого занятия! (9 впереди)</div>
       <div class="pop-out img-baby">
