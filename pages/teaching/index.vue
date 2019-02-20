@@ -80,6 +80,7 @@
   
     <div class="slide slide_vh-centered">
       <div class="window-small heading">История веб</div>
+      <!-- сделать один слайд с инфографикой про историю, истории очень много и от нее устают -->
       <div class="window-small">браузеры</div>
       <div class="window-small font-task">фаст таск -  curl wttr.in/moscow</div>
       <div class="window-small">Тим Бернерс-Ли</div>
@@ -108,19 +109,13 @@
       первый проект
       «Свидетели HTML»
       </div>
-    </div>
-
-    <div class="slide">
-      <div class="window-small">
-      ДЗ
-      Заверстать что?
-      Только теги (показать древние типа marquee) со стилями по умолчанию 
-      - портфолио либо ноунейма ЛИБО: 
-      - Скорпион (мк)
-      - Егор Летов
-      - Чихольд 
-      </div>
     </div> -->
+
+    <div class="slide slide_vh-centered">
+      <div class="window-small heading">ДЗ</div>
+      <div class="window-small font-task">Страница с ссылками на 5 x (*.html -> текст + изображение)</div>
+      <div class="window-small">На каждой из страниц текст и изображение. Минимум одно слово и минимум одно изображение</div>
+    </div>
 
     <!-- дз Ж по сайту в день -->
 
