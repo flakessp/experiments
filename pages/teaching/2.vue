@@ -169,7 +169,6 @@ left: -150px;
 
 .img {
   &-2 {
-    top: 50px;
     left: 50px;
     z-index: 0;
     transform: rotate(-5deg);
