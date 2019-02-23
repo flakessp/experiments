@@ -9,7 +9,9 @@
         </div>
         <img src="/teaching/2/illustration_1.png" alt="">
       </div>
+      <div class="window-img-wrapper pop-out img-attr img-big"><img src="/teaching/2/text.gif" alt=""></div>
     </div>
+
     <div class="slide slide_vh-centered">
       <div class="window-small heading">
         вспоминаем, что делали на прошлом занятии
@@ -25,7 +27,7 @@
     </div>
     <!-- тег/атрибут -->
     <div class="slide slide_vh-centered">
-          <div class="window-small">Тег</div>
+          <div class="window-small heading">Тег</div>
           <div class="window-img-wrapper window-small pop-out img-tag img-big"><img src="/teaching/2/tag.png" alt=""></div>
 
           <div class="window-small">Тег. Атрибуты</div>
@@ -35,7 +37,6 @@
 
     <div class="slide slide_vh-centered">
       <div class="window-img-wrapper pop-out window-small img-medium img-3"><img src="/teaching/2/illustration_2.png" alt=""></div>
-      <div class="window-small heading">теги</div>
       <div class="window-small code-block">
         <div v-for="i in tagsBlock" :key=i.name>
           <b>&lt;{{i.name}}&gt;</b> - <em>{{i.description}}</em>
@@ -89,18 +90,35 @@
       <div class="window-small pop-out img-medium img-5">
         <img src="/teaching/2/marginalia-list-is-empty.png" alt="">
       </div>
-      <div class="window-small">.class </div>
+      <div class="window-small heading">классы </div>
     </div>
-    <div class="slide">
-      <div class="window-small">подключаем шрифты</div>
-    </div>
-
-    <div class="slide slide_vh-centered">про контейнеры (обертки для нескольких блоков)</div>
 
     <div class="slide slide_vh-centered">
+      <div class="window-small pop-out img-medium">
+        <img src="/teaching/2/marginalia-productive-work.png" alt="">
+      </div>
+      <div class="window-small">подключаем шрифты</div>
+      <div class="window-small"> <a href="https://fonts.google.com">Google Fonts</a></div>
+    </div>
+
+    <div class="slide slide_vh-centered">
+      <div class="window-small pop-out img-medium img-containers">
+        <img src="/teaching/2/marginalia-shipping.png" alt="">
+      </div>
+      <div class="window-small">контейнеры</div>
+    </div>
+
+    <div class="slide slide_vh-centered">
+      <div class="window-small pop-out img-medium">
+        <img src="/teaching/2/marginalia-sign-in.png" alt="">
+      </div>
       <div class="window-small">конец второго дня</div>
-      иллюстрации
-      учебник
+      <div class="pop-out img-pics-info">
+        <em>иллюстрации <a href="https://icons8.com/ouch/style/marginalia">icons8</a></em>
+      </div>
+      <div class="pop-out img-book-info">
+        <em>фрагменты книги <a href="http://www.htmlandcssbook.com/">Html &amp; Css by Jon Duckett</a></em>
+      </div>
     </div>
     
   </div>
@@ -183,6 +201,23 @@ left: -150px;
   &-css-selector {
         left: 150px;
     bottom: 300px;
+    transform: rotate(1deg);
+  }
+  &-pics-info {
+    bottom: 0;
+    right: 0;
+    font-size: .5em;
+    padding: 50px;
+  }
+  &-book-info {
+    bottom: 50px;
+    right: 0;
+    font-size: .5em;
+    padding: 50px;
+  }
+  &-containers {
+    top: 75px;
+    right: 50px;
     transform: rotate(1deg);
   }
 
