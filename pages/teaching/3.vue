@@ -31,25 +31,25 @@
       </section>
     </div>
     <div class="slide slide-2" :class="{isSelected: selected == 2}" @click="setSelected(2)">
-      <div class="caption">в предыдущей серии</div>
+      <div class="caption">все, что раньше</div>
       <section>
-        <h1>На предыдущем занятии</h1>
-
+        <h1>На&nbsp;предыдущем занятии</h1>
         <h2>Тег,  Атрибут</h2>
-        <p>как выглядит тег, а как атрибут<br>какие бывают атрибуты (стили, классы, ссылки и тд)</p>
+        <p>Тег выглядит вот так &mdash; &lt;h1&gt;&lt;/h1&gt;. Все, что между открывающего и закрывающего тега называется контентом, а сам тег в этом случае становится родителем и контейнером для своего контента. <br>
+        Атрибут &mdash; &lt;h1 class="my-style"&gt;&lt;/h1&gt;. Любая форма записи со словом, знаком "равно" и значением в кавычках после &mdash; это атрибут. С помощью атрибутов задаются классы, указываются ссылки на другие сайты и изображения. Атрибуты нужны, что бы передать дополнительную информацию в тег. 
 
         <h2>Основные html элементы</h2>
         <p>
           <ul>
-            <li>div</li>
-            <li>h1</li>
-            <li>p</li>
-            <li>br</li>
-            <li>span</li>
-            <li>a</li>
-            <li>img</li>
-            <li>em</li>
-            <li>b</li>
+            <li>div - универсальный блочный тег</li>
+            <li>h1 - заголовок первого уровня</li>
+            <li>p - абзац текста</li>
+            <li>br - обрыв строки</li>
+            <li>span - универсальный линейный тег</li>
+            <li>a - ссылка</li>
+            <li>img - картинка</li>
+            <li>em - курсив</li>
+            <li>b - жирное начертание</li>
           </ul>
         </p>
 
@@ -60,37 +60,42 @@
         <p>h1 {color: font-size: 2em;}</p>
 
         <h2>Шрифты</h2>
-        <p>подключение, css свойства, ссылка на google fonts</p>
-        <p>
-          <ul>
-            <li>@font-face</li>
-            <li>font-family</li>
-            <li>font-size</li>
-            <li>font-weight</li>
-            <li>line-height</li>
-            <li>text-transform</li>
-          </ul>
-        </p>
+        <p>подключение, css свойства, <a href="https://fonts.google.com">Гугл Шрифты</a></p>
+
+        <ul>
+          <li>@font-face - подключение локального файла со шрифтом</li>
+          <li>font-family - установка шрифта</li>
+          <li>font-size - размер шрифта</li>
+          <li>font-weight - установка толщины начертания</li>
+          <li>line-height - интерлиньяж</li>
+          <li>letter-spacing - межбуквенный интервал</li>
+          <li>text-transform - свойство ALLCAPS искать здесь</li>
+          <li>-webkit-text-stroke - аутлайн, не забудь поставить прозрачный цвет текста (transparent)</li>
+        </ul>
       </section>
     </div>
     <div class="slide slide-3" :class="{isSelected: selected == 3}" @click="setSelected(3)">
       <div class="caption">Box-model</div>
       <section>
-        <h1>Box-model</h1>
+        <h1>Box model</h1>
         <div class="pop pop-3-1">
           <img src="/teaching/3/box-model.png" alt="">
         </div>
-        <p>блочная модель расчитывает положение элемента на странице из следующиех свойств:</p>
+        <p>Блочная модель расчитывает положение элемента на странице из следующиех свойств:</p>
         <h2>width, height</h2>
-        <p>высота и ширина, для линейных элементов не работает</p>
+        <p>Но высота и ширина, для линейных элементов не работает</p>
+        <h2>Как же быть с элементами в ряд?!</h2>
+        <p>спойлер (display:inline-block)</p>
         <h2>padding</h2>
         <p>внутренний отступ</p>
         <h2>margin</h2>
-        <p>margin: auto, выравниванием по центру устаноавливая равные отступы слева и справа</p>
+        <p>отступ вне границ элемента</p>
+        <p>margin: auto, выравниванием по центру устанавливая равные отступы слева и справа</p>
         <!-- про выровнять по центру -->
         <h2>border</h2>
         <p class="code-block"> h1 {<br>border: 1px solid black<br>}</p>
         <h2>сокращенная форма записи для всего выше</h2>
+
         <p>
           в одну строчку и значения по часовой стрелке margin: 10px 10px 10px 10px <br>
           тоже самое, что и margin: 10px <br>
@@ -98,10 +103,8 @@
         </p>
 
         <h2>линейные и блочные</h2>
-        <p>коротко говоря, линейным ширину и высоту задать нельзы, отступ сверху и снизу тоже (высота линии, привет!) это текст</p>
-
-        <h2>полезные ссылки</h2>
-        <p>learnlayout</p>
+        <p>ну в общем, линейным ширину и высоту задать нельзы, отступ сверху и снизу тоже (высота линии, привет!) это текст</p>
+        <p><a href="http://learnlayout.com/">классный сайт про лейаут</a></p>
       </section>
     </div>
     <div class="slide slide-4" :class="{isSelected: selected == 4}" @click="setSelected(4)">
@@ -214,22 +217,24 @@ body {
 }
 
 .outer {
-  width: 120vw;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 .container {
   height: 100vh;
+  width: 120vw;
   background: black;
   font-size: 100px;
   color: white;
 
   display: flex;
   justify-content: center;
-  // align-items: center;
 }
 
 section {
   width: 800px;
   position: relative;
+  font-size: 40px;
 }
 
 .slide {
@@ -267,7 +272,6 @@ section {
     writing-mode: tb;
     left: 1em;
     font-size: 0.6em;
-    // font-style: italic;
     text-transform: uppercase;
     font-weight: 800;
     color: white;
@@ -323,8 +327,11 @@ section {
     &-centered {
       margin: 0 auto;
     }
-    // box-shadow: 0px 0px 20px darkblue;
   }
+}
+
+a{ 
+  color: inherit;
 }
 
 .slide-3 {
