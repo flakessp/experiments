@@ -36,7 +36,7 @@
         <h1>На предыдущем занятии</h1>
 
         <h2>Тег,  Атрибут</h2>
-        <p>как выглядит тег, а как атрибут <br>какие бывают атрибуты (стили, классы, ссылки и тд)</p>
+        <p>как выглядит тег, а как атрибут<br>какие бывают атрибуты (стили, классы, ссылки и тд)</p>
 
         <h2>Основные html элементы</h2>
         <p>
@@ -52,33 +52,34 @@
             <li>b</li>
           </ul>
         </p>
-        
-        <h2>CSS</h2>
 
-        <h2>Варианты записи CSS</h2>
+        <h2>CSS. Варианты записи</h2>
+        <p>в атрибут, в тег, отдельным файлом</p>
 
-        <h2>Основные свойства</h2>
-        <!--  color, background-->
+        <h2>Синтаксис</h2>
+        <p>h1 {color: font-size: 2em;}</p>
 
         <h2>Шрифты</h2>
         <p>подключение, css свойства, ссылка на google fonts</p>
         <p>
           <ul>
             <li>@font-face</li>
-              <li>font-family</li>
+            <li>font-family</li>
             <li>font-size</li>
             <li>font-weight</li>
             <li>line-height</li>
             <li>text-transform</li>
           </ul>
         </p>
-
       </section>
     </div>
     <div class="slide slide-3" :class="{isSelected: selected == 3}" @click="setSelected(3)">
       <div class="caption">Box-model</div>
       <section>
         <h1>Box-model</h1>
+        <div class="pop pop-3-1">
+          <img src="/teaching/3/box-model.png" alt="">
+        </div>
         <p>блочная модель расчитывает положение элемента на странице из следующиех свойств:</p>
         <h2>width, height</h2>
         <p>высота и ширина, для линейных элементов не работает</p>
@@ -88,6 +89,7 @@
         <p>margin: auto, выравниванием по центру устаноавливая равные отступы слева и справа</p>
         <!-- про выровнять по центру -->
         <h2>border</h2>
+        <p class="code-block"> h1 {<br>border: 1px solid black<br>}</p>
         <h2>сокращенная форма записи для всего выше</h2>
         <p>
           в одну строчку и значения по часовой стрелке margin: 10px 10px 10px 10px <br>
@@ -196,7 +198,7 @@ export default {
 <style lang="scss" scoped>
 
 .outer {
-  width: 100vw;
+  width: 120vw;
 }
 .container {
   height: 100vh;
@@ -211,6 +213,7 @@ export default {
 
 section {
   width: 800px;
+  position: relative;
 }
 
 .slide {
@@ -236,6 +239,13 @@ section {
       transform: translateX(-200%);
     }
   }
+  .pop {
+    position: absolute;
+    filter: grayscale(1);
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
   .caption {
     position: absolute;
     writing-mode: tb;
@@ -251,13 +261,14 @@ section {
 
   h1 {
     font-size: 2.5em;
-    margin-bottom: .4em;
+    margin-bottom: .6em;
     line-height: 1;
     font-family: 'pt mono';
   }
   h2 {
     font-size: 1.5em;
-    margin-bottom: .3em;
+    line-height: 1;
+    margin-bottom: .2em;
     font-family: 'pt mono';
     letter-spacing: 1px;
   }
@@ -266,7 +277,7 @@ section {
     font-family: 'aeroport';
     font-size: .8em;
     line-height: 1;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
   }
   .code-block {
     font-family: monospace;
@@ -300,11 +311,11 @@ section {
   }
 }
 
-.slide-2 {
-  section {
+.slide-3 {
+  .pop-3-1 {
+    right: -80%;
+
   }
-  
-  
 }
 
 </style>
