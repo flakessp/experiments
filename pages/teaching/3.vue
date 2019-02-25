@@ -123,14 +123,27 @@
       <section>
         <h1>Единицы Измерения</h1>
          <h2>px</h2>
+         <p>абсолютное значение, все понятно</p>
          <h2>%</h2>
+         <p>свойство, значение которого задается от значения свойства родителя</p>
          <h2>Em, Rem</h2>
+         <p>свойство, значения которого берутся от свойства font-size родителя</p>
          <h2>Vh, Vw</h2>
-
+         <p>относительно высоты(vh) и ширины (vw) окна браузера</p>
+         <p>
+           <a href="https://learn.javascript.ru/css-units">вот здесь больше и подробно</a>
+        </p>
+        
+        <h2>black</h2>
+        <p>раньше компьютеры поддерживали 256 цветов, вот это наследие</p>
          <h2>#000</h2>
-         <h2>black</h2>
+         <p>такая форма записи называется HEX, на маке есть удобное приложение - digital colour meter</p>
+         
          <h2>rgb(0,0,0)</h2>
+         <p>запись цвета по трем цветам (красный, зеленый, синий)</p>
          <h2>rgba(0,0,0,0)</h2>
+         <p>тоже самое плюс альфа канал</p>
+         
       </section>
     </div>
     <div class="slide slide-6" :class="{isSelected: selected == 6}" @click="setSelected(6)">
@@ -196,6 +209,9 @@ export default {
 
 
 <style lang="scss" scoped>
+body {
+  font-size: 10px;
+}
 
 .outer {
   width: 120vw;
@@ -242,8 +258,8 @@ section {
   .pop {
     position: absolute;
     filter: grayscale(1);
-    &:hover {
-      filter: grayscale(0);
+    :hover {
+      filter: grayscale(0)
     }
   }
   .caption {
@@ -314,8 +330,12 @@ section {
 .slide-3 {
   .pop-3-1 {
     right: -80%;
-
   }
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    
 }
 
 </style>
