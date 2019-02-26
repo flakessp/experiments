@@ -27,10 +27,26 @@ That was yesterday. In the meantime something terrible happened. Tako's friend P
 
 }
 .podcast {
+
+  // // background: darkblue;
+  // background-color: red;
+  // background-image: url(http://placekitten.com/300/300);
+  // background: url(http://placekitten.com/300/300);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background: url(http://placekitten.com/300/300) center/cover no-repeat;
+
+  background: linear-gradient(darkblue, darksalmon);
+
+  transition: all 0.3s ease-in-out;
+  cursor: url(http://placekitten.com/100/100), auto;
+
+
   max-width: 300px;
   color: #1024CA;
   border: 1px solid #1024CA;
-  background: #DCDCDC;
+  // background: #DCDCDC;
   padding: 15px;
   margin-bottom: 60px;
   overflow: auto;
@@ -49,4 +65,14 @@ That was yesterday. In the meantime something terrible happened. Tako's friend P
     margin-bottom: 30px;
   }
 }
+
+.podcast:hover {
+  color:white;
+  border-radius: 50%;
+}
+
+p::selection {
+  background: pink;
+}
+
 </style>

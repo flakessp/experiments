@@ -27,6 +27,7 @@
         <h2>часть первая</h2>
         <!-- <div class="logo">hashslash</div> -->
         <div class="circle circle-centered"></div>
+        <div class="logo">hashslash</div>
         <p></p>
       </section>
     </div>
@@ -57,7 +58,7 @@
         <p>в атрибут, в тег, отдельным файлом</p>
 
         <h2>Синтаксис</h2>
-        <p>h1 {color: font-size: 2em;}</p>
+        <p>h1 { font-size: 2em;}</p>
 
         <h2>Шрифты</h2>
         <p>подключение, css свойства, <a href="https://fonts.google.com">Гугл Шрифты</a></p>
@@ -150,21 +151,19 @@
       </section>
     </div>
     <div class="slide slide-6" :class="{isSelected: selected == 6}" @click="setSelected(6)">
-      <div class="caption">::псевдо-селекторы</div>
+      <div class="caption">::псевдо-классы</div>
       <section>
-        <h1>::псевдо-селекторы</h1>
-        <p>классная история</p>
+        <h1>::псевдо-классы</h1>
+        <p><a href="https://developer.mozilla.org/ru/docs/Web/CSS/%D0%9F%D1%81%D0%B5%D0%B2%D0%B4%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B">линк</a></p>
         <h2>hover</h2>
         <h2>selection</h2>
-
-        <p>ссылки на почитать</p>
       </section>
     </div>
     <div class="slide slide-7" :class="{isSelected: selected == 7}" @click="setSelected(7)">
       <div class="caption">Transitions</div>
       <section>
         <h1>Transitions</h1>
-        <p>all .3s ease-in-out</p>
+        <p>transition: all .3s</p>
       </section>
     </div>
     <div class="slide slide-8" :class="{isSelected: selected == 8}" @click="setSelected(8)">
@@ -180,6 +179,8 @@
       <section>
         <h1>Спасибо за внимание</h1>
         <h2>ДЗ</h2>
+        <p>E S H</p>
+        <h2>?</h2>
       </section>
     </div>                    
   </div>
@@ -212,8 +213,25 @@ export default {
 
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css?family=PT+Mono|PT+Serif&subset=cyrillic');
+
+h1, h2, p {
+font-family: 'PT Mono', monospace;  
+}
 body {
   font-size: 10px;
+}
+
+.logo {
+      mix-blend-mode: overlay;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: bold;
+    /* font-family: fantasy; */
+    position: absolute;
+    bottom: -200px;
+    right: 50px;
+    transform: scaleX(4) scaleY(6) rotate(-1deg);
 }
 
 .outer {
@@ -283,26 +301,18 @@ section {
     font-size: 2.5em;
     margin-bottom: .6em;
     line-height: 1;
-    font-family: 'pt mono';
   }
   h2 {
     font-size: 1.5em;
     line-height: 1;
     margin-bottom: .2em;
-    font-family: 'pt mono';
     letter-spacing: 1px;
   }
   
   p {
-    font-family: 'aeroport';
     font-size: .8em;
     line-height: 1;
     margin-bottom: 1.5em;
-  }
-  .code-block {
-    font-family: monospace;
-    padding: .25em 0;
-    padding-left: .5em;
   }
 }
 
@@ -320,6 +330,9 @@ section {
     line-height: 1;
   }
   .circle {
+    position: absolute;
+    right: 100px;
+    bottom: 150px;
     width: 200px;
     height: 200px;
     border-radius: 50%;
