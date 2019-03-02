@@ -1,3 +1,4 @@
+// переписать в пен 
 <template>
 <div class="flex-grid-center">
 			<div class="mac-window">
@@ -27,6 +28,7 @@
 }
 
 .flex-grid-center {
+	margin: .5em;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
@@ -36,7 +38,7 @@
 	background: white;
 	color: black;
 	border: 1px solid black;
-	width: 600px;
+	min-width: 600px;
 	border-radius: 1px;
 	box-shadow: 1px 1px 0 black;
 	font-family: Chicago;
@@ -97,7 +99,7 @@ border: 1px solid black;
 }
 
 .mac-window p {
-	padding: 1em;
+	padding: 0;
 }
 
 </style>
