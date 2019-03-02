@@ -49,9 +49,6 @@
   border: 1px solid black;
 }
 
-pen {
-  margin: .5em 0;
-}
 
 h1, h2 {
   margin: .5em 0;

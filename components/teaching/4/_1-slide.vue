@@ -1,13 +1,17 @@
 <template>
   <slide>
     <div class="container">
-        <!-- <input type="range"  v-model="rangeVal" name="" id="" value="10" min=0 max=200>
-        <h1>let hashslash = web.html + web.css + web.js</h1> -->
-        <p :style="fontSize">
-          <span class="anim-yellow" @mouseover="changeValue" @mouseleave="changeValue">position </span>  top animation <span class="anim-yellow">absolute</span> 
-          right <span class="anim-red"> @keyframes</span> alternate  bottom jquery relative <span class="anim-red">from to </span>
-          javascript DOM click left inifinite <span>hashlash;</span>
-          {{scrollTop}}
+      
+        <input type="range"  v-model="rangeVal" name="" id="" value="10" min=0 max=200>
+      
+        
+        <!-- <h1>let hashslash = web.html + web.css + web.js</h1> -->
+        <p >
+          <span class="anim-yellow c-brown">position </span>  <span>top</span> <span class="c-blue">animation</span> <span class="anim-yellow">absolute</span> 
+          <span>right</span> <span class="anim-red"> @keyframes</span> <span>alternate</span>  <span> jquery</span> <span>relative</span> <span class="anim-red">from to </span>
+          <span class="c-red">javascript DOM click</span>  <span class="c-yellow">left inifinite</span>
+          <br>
+          <span class="strict" :style="vFontStyles"> hashlash #/ {{scrollTop}} </span>
         </p>
         <!-- <AnimatedFont class="animated">привет</AnimatedFont> -->
       </div>
@@ -81,10 +85,10 @@ export default {
 $basic: #4B4B4B;
 $basic-font-size: 10vmin;
 $slide-1-font-size: 12vmin;
-$c-red: 'red';
-$c-yellow: 'yellow';
-$c-blue: 'blue';
-$c-brown: 'brown';
+$c-red: #E64C27;
+$c-yellow: #F0DA25;
+$c-blue: #E8E1C5;
+$c-brown: #E64A69;
 
 @font-face {
   font-family: "Marvin Visions";
@@ -93,7 +97,10 @@ $c-brown: 'brown';
 }
 
 .container {
+  position: relative;
+
     min-height: 100vh;
+    padding: .5em;
 
     display: flex;
     justify-content: center;
@@ -107,10 +114,23 @@ $c-brown: 'brown';
     font-size: $slide-1-font-size;
     font-variation-settings: "wght" 0
 }
+
+input {
+  position: absolute;
+  bottom: 30px;
+  
+
+  background: white;
+  
+    display: inline-block;
+    width: 300px;
+    height: 50px;
+  
+}
 @keyframes team-yellow {
   from {
       color: $basic;
-      font-variation-settings: "wght" 00;
+      font-variation-settings: "wght" 00 ;
   }
   to {
       color: yellow;
@@ -128,12 +148,12 @@ $c-brown: 'brown';
 }
 
 .anim-red {
-    animation: 12s team-red alternate infinite;
-    animation-delay: 1s;
+    // animation: 12s team-red alternate infinite;
+    // animation-delay: 1s;
 }
 
 .anim-yellow {
-    animation: 4s team-yellow alternate infinite;    
+    // animation: 4s team-yellow alternate infinite;    
 }
 
 
@@ -143,16 +163,37 @@ h1 {
     font-variation-settings: "wght" 0;
     line-height:.8;
     
-    animation: size 10s alternate infinite;
+    // animation: size 10s alternate infinite;
 }
 
 p {
+  cursor: pointer;
     text-align: center;
     max-width: 80vw;
     line-height: .75;
     transition: all 3s;
+} 
+span {
+  transition: all .7s;
 }
-
+.strict {
+  transition: none;
+}
+span:hover {
+  font-variation-settings: "wght" 170;
+}
+.c-yellow:hover {
+  color: $c-yellow;
+}
+.c-red:hover {
+  color: $c-red;
+}
+.c-blue:hover {
+  color: $c-blue;
+}
+.c-brown:hover {
+  color: $c-brown;
+}
 </style>
 
 
