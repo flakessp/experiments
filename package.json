@@ -20,7 +20,8 @@
     "cross-env": "^5.2.0",
     "moment": "^2.24.0",
     "nuxt": "^2.0.0",
-    "p5": "^0.7.3"
+    "p5": "^0.7.3",
+    "vue-scrollto": "^2.14.0"
   },
   "devDependencies": {
     "node-sass": "^4.11.0",

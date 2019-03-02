@@ -7,7 +7,7 @@
         
         <!-- <h1>let hashslash = web.html + web.css + web.js</h1> -->
         <p >
-          <span class="anim-yellow c-brown">position </span>  <span>top</span> <span class="c-blue">animation</span> <span class="anim-yellow">absolute</span> 
+          <span class="anim-yellow c-brown"> <a href="#" v-scroll-to="'#t-position'">position</a> </span>  <span>top</span> <span class="c-blue">animation</span> <span class="anim-yellow">absolute</span> 
           <span>right</span> <span class="anim-red"> @keyframes</span> <span>alternate</span>  <span> jquery</span> <span>relative</span> <span class="anim-red">from to </span>
           <span class="c-red">javascript DOM click</span>  <span class="c-yellow">left inifinite</span>
           <br>
