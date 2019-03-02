@@ -4,9 +4,9 @@
             <!-- <input type="range"  v-model="rangeVal" name="" id="" value="10" min=0 max=200>
             <h1>let hashslash = web.html + web.css + web.js</h1> -->
             <p>
-                <span :style="vFontStyles">position </span> top 
-            animation <span :style="vFontStyles">absolute</span>  <span>  #/</span>   
-             right @keyframes alternate  bottom jquery relative from to 
+                <span class="anim-yellow">position </span> top 
+            animation <span class="anim-yellow">absolute</span>  <span>  #/</span>   
+             right <span class="anim-red"> @keyframes</span> alternate  bottom jquery relative <span class="anim-red">from to </span>
             javascript DOM click left inifinite <span>hashlash;</span>
             </p>
             <!-- <AnimatedFont class="animated">привет</AnimatedFont> -->
@@ -51,6 +51,7 @@ export default {
 <style lang="scss" scoped>
 
 $basic: #4B4B4B;
+$root-font-size: 2em;
 
 @font-face {
   font-family: "Marvin Visions";
@@ -68,15 +69,15 @@ p {
     }
 }
 
-.animated {
-    animation: color-size 3s alternate infinite;
-    
-    @for $i from 1 through 4 {
-        &:nth-child(#{$i}) {
-            animation-delay: #{$i * 0.2s};
-        }
-    }
+.anim-red {
+    animation: 12s team-red alternate infinite;
+    animation-delay: 1s;
 }
+
+.anim-yellow {
+    animation: 4s team-yellow alternate infinite;    
+}
+
 
 .container {
     background: #232323;
@@ -101,23 +102,33 @@ h1 {
 
 @keyframes size {
     from {
-        font-variation-settings: "wght" 00;
+        
     }
     to {
-        font-variation-settings: "wght" 170;
+        
     }
   }
 
-@keyframes color-size {
+@keyframes team-yellow {
   from {
       color: $basic;
-      font-variation-settings: "wght" 00, "opsz" 80;
+      font-variation-settings: "wght" 00;
   }
   to {
       color: yellow;
-      font-variation-settings: "wght" 170, "opsz" 80;
+      font-variation-settings: "wght" 170;
   }
 }
 
+@keyframes team-red {
+  from {
+      color: $basic;
+      font-variation-settings: "wght" 00;
+  }
+  to {
+      color: red;
+      font-variation-settings: "wght" 170;
+  }
+}
 </style>
 
