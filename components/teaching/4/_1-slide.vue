@@ -1,25 +1,26 @@
 <template>
+  <slide>
     <div class="container">
-        <div class="slide">
-            <!-- <input type="range"  v-model="rangeVal" name="" id="" value="10" min=0 max=200>
-            <h1>let hashslash = web.html + web.css + web.js</h1> -->
-            <p>
-                <span class="anim-yellow">position </span> top 
-            animation <span class="anim-yellow">absolute</span>  <span>  #/</span>   
-             right <span class="anim-red"> @keyframes</span> alternate  bottom jquery relative <span class="anim-red">from to </span>
-            javascript DOM click left inifinite <span>hashlash;</span>
-            </p>
-            <!-- <AnimatedFont class="animated">привет</AnimatedFont> -->
-        </div>
-    </div>
+        <!-- <input type="range"  v-model="rangeVal" name="" id="" value="10" min=0 max=200>
+        <h1>let hashslash = web.html + web.css + web.js</h1> -->
+        <p>
+            <span class="anim-yellow">position </span>  top 
+        animation <span class="anim-yellow">absolute</span> 
+        right <span class="anim-red"> @keyframes</span> alternate  bottom jquery relative <span class="anim-red">from to </span>
+        javascript DOM click left inifinite <span>hashlash;</span>
+        </p>
+        <!-- <AnimatedFont class="animated">привет</AnimatedFont> -->
+      </div>
+    </slide>
 </template>
 
 <script>
 import AnimatedFont from '@/components/teaching/AnimatedVFont';
+import Slide from '@/components/teaching/4/slide.vue';
 
 export default {
-    components: {AnimatedFont},
-    data() {
+    components: {Slide, AnimatedFont},
+  data() {
         return {
             rangeVal: 0, 
             animation: {
@@ -46,11 +47,14 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
-
 $basic: #4B4B4B;
-$root-font-size: 2em;
+$basic-font-size: 10vmin;
+$slide-1-font-size: 12vmin;
+$c-red: 'red';
+$c-yellow: 'yellow';
+$c-blue: 'blue';
+$c-brown: 'brown';
 
 @font-face {
   font-family: "Marvin Visions";
@@ -58,45 +62,21 @@ $root-font-size: 2em;
   font-style: normal;
 }
 
-p {
-    text-align: center;
-    max-width: 60vw;
-    line-height: .75;
-
-    &::selection {
-        background: red;
-    }
-}
-
-.anim-red {
-    animation: 12s team-red alternate infinite;
-    animation-delay: 1s;
-}
-
-.anim-yellow {
-    animation: 4s team-yellow alternate infinite;    
-}
 .container {
-    background: #232323;
-    color: #4B4B4B;
+    height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    -webkit-font-smoothing: antialiased;
-    height: 100vh;
+    
+    background: #232323;
+    color: #4B4B4B;
+    
+    
     font-family: "Marvin Visions";
-    font-size: 9vmin;
+    font-size: $slide-1-font-size;
     font-variation-settings: "wght" 0
 }
-
-h1 {
-    font-size: .5em;
-    font-variation-settings: "wght" 0;
-    line-height:.8;
-    
-    animation: size 10s alternate infinite;
-}
-
 @keyframes team-yellow {
   from {
       color: $basic;
@@ -115,7 +95,37 @@ h1 {
     to {
         font-variation-settings: "wght" 170;
     }
-  }
+}
+
+.anim-red {
+    animation: 12s team-red alternate infinite;
+    animation-delay: 1s;
+}
+
+.anim-yellow {
+    animation: 4s team-yellow alternate infinite;    
+}
+
+
+
+h1 {
+    font-size: .5em;
+    font-variation-settings: "wght" 0;
+    line-height:.8;
+    
+    animation: size 10s alternate infinite;
+}
+
+p {
+    text-align: center;
+    max-width: 60vw;
+    line-height: .75;
+
+    &::selection {
+        background: red;
+    }
+}
 
 </style>
+
 
