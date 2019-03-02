@@ -10,7 +10,6 @@
             javascript DOM click left inifinite <span>hashlash;</span>
             </p>
             <!-- <AnimatedFont class="animated">привет</AnimatedFont> -->
-            
         </div>
     </div>
 </template>
@@ -76,8 +75,6 @@ p {
 
 .anim-yellow {
     animation: 4s team-yellow alternate infinite;    
-}
-
 
 .container {
     background: #232323;
@@ -100,15 +97,6 @@ h1 {
     animation: size 10s alternate infinite;
 }
 
-@keyframes size {
-    from {
-        
-    }
-    to {
-        
-    }
-  }
-
 @keyframes team-yellow {
   from {
       color: $basic;
@@ -121,13 +109,12 @@ h1 {
 }
 
 @keyframes team-red {
-  from {
-      color: $basic;
-      font-variation-settings: "wght" 00;
-  }
-  to {
-      color: red;
-      font-variation-settings: "wght" 170;
+    from{
+            font-variation-settings: "wght" 00;
+    }
+    to {
+        font-variation-settings: "wght" 170;
+    }
   }
 }
 </style>
