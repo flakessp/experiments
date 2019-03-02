@@ -75,7 +75,7 @@ p {
 
 .anim-yellow {
     animation: 4s team-yellow alternate infinite;    
-
+}
 .container {
     background: #232323;
     color: #4B4B4B;
@@ -116,6 +116,6 @@ h1 {
         font-variation-settings: "wght" 170;
     }
   }
-}
+
 </style>
 
