@@ -39,6 +39,8 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+
+    ['vue-scrollto/nuxt', { duration: 1000 }],
   ],
 
   /*

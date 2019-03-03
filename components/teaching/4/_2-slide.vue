@@ -17,7 +17,7 @@
 
     <div class="container">
 
-    <h1>Анимация</h1>
+    <h1 id="t-position">Анимация</h1>
     <h2>Keyframes</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta distinctio totam natus quae ratione quod quam expedita modi amet id sit eveniet repellendus, in repudiandae quasi, nesciunt et magnam dignissimos.</p>
     <h2>from to</h2>
@@ -45,9 +45,6 @@
   border: 1px solid black;
 }
 
-pen {
-  margin: .5em 0;
-}
 
 h1, h2 {
   margin: .5em 0;
