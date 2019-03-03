@@ -4,10 +4,15 @@
         <pen>
             <iframe height="530" style="width: 500px;" scrolling="no" title="CMY/CMYK Color printing with background-blend-mode" src="//codepen.io/nathantaylor/embed/xgazdX/?height=530&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true"/>
         </pen>
+        <h2>Transition</h2>
+        <p>Примеры каждого из свойств и сокращенная форма</p>
         <h2>Keyframes</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta distinctio totam natus quae ratione quod quam expedita modi amet id sit eveniet repellendus, in repudiandae quasi, nesciunt et magnam dignissimos.</p>
-        <h2>from to</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur aliquam laboriosam sed dignissimos officiis iste. Temporibus nemo sapiente aspernatur consequatur tenetur inventore, illum quos cupiditate veritatis ipsam ipsa aliquid. Inventore?</p>
+        <p>from to - примеры кода</p>
+        <h3>Задание</h3>
+        <p>Анимируем абсолютно спозиционированные круги</p>
+        <p><i>Допольнительно:</i>Добавляем mix-blend-mode</p>
+        <h3>Адванс</h3>
+        <p>Анимируем аутлайн текст как на кодпене</p>
     </div>
 </template>
 

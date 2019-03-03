@@ -1,8 +1,17 @@
 <template>
   <div class="container">
     <h1>Гит</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum vitae sunt non quis ad. Sit omnis at nobis exercitationem excepturi? Quae consectetur veniam itaque quia nemo placeat fugit assumenda iusto!</p>
+    <h2>регистрация</h2>
+    <h2>создание репозитория</h2>
+    <h2>установка Github Desktop</h2>
+    <h2>Логин, скачивание нового репозитория</h2>
+    <h2>коммит, пуш, проверка</h2>
     <h1>Netlify</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, fuga, velit minus tempora mollitia asperiores distinctio iusto, esse optio dolorem pariatur repudiandae laudantium a vel? Facere expedita ut quae voluptates.</p>
+    <h2>регистрация</h2>
+    <h2>добавление аккаунта Github</h2>
+    <h2>Выбор репозитория</h2>
+    <h2>Выбор домена</h2>
+    <h2>Запуск продакшн</h2>
+    <h2>Адванс: подключение и покупка своего домена</h2>
   </div>
 </template>
