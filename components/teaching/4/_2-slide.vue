@@ -24,13 +24,9 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur aliquam laboriosam sed dignissimos officiis iste. Temporibus nemo sapiente aspernatur consequatur tenetur inventore, illum quos cupiditate veritatis ipsam ipsa aliquid. Inventore?</p>
     </div>
 
-    <div class="container">
-      <h1>Вариативные шрифты</h1>
-      <pen>
-        <iframe height="530" style="width: 100%;" scrolling="no" title="CMY/CMYK Color printing with background-blend-mode" src="//codepen.io/nathantaylor/embed/xgazdX/?height=530&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true"/>
-      </pen>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor quasi quibusdam pariatur minus magni unde est odio, odit officia commodi cumque reiciendis tempore, nemo perspiciatis asperiores magnam. Tempore, in? Itaque?</p>
-    </div>
+    <v-fonts/>
+
+    
 
     <div class="container">
       <h1>Javascript</h1>
@@ -61,8 +57,9 @@ h1, h2 {
 <script>
 import Slide from '@/components/teaching/4/slide.vue';
 import Pen from '@/components/windows/old_mac_window.vue';
+import vFonts from '@/components/teaching/themes/vFonts.vue';
 
 export default {
-    components: {Slide, Pen},
+    components: {Slide, Pen, vFonts},
 }
 </script>

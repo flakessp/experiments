@@ -3,7 +3,7 @@
     <div class="container">
         <!-- <input type="range"  v-model="rangeVal" name="" id="" value="10" min=0 max=200>
         <h1>let hashslash = web.html + web.css + web.js</h1> -->
-        <p :style="fontSize">
+        <p>
           <span class="anim-yellow" @mouseover="changeValue" @mouseleave="changeValue">position </span>  top animation <span class="anim-yellow">absolute</span> 
           right <span class="anim-red"> @keyframes</span> alternate  bottom jquery relative <span class="anim-red">from to </span>
           javascript DOM click left inifinite <span>hashlash;</span>
