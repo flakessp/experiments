@@ -147,17 +147,6 @@ input {
     }
 }
 
-.anim-red {
-    // animation: 12s team-red alternate infinite;
-    // animation-delay: 1s;
-}
-
-.anim-yellow {
-    // animation: 4s team-yellow alternate infinite;    
-}
-
-
-
 h1 {
     font-size: .5em;
     font-variation-settings: "wght" 0;
@@ -165,7 +154,10 @@ h1 {
     
     // animation: size 10s alternate infinite;
 }
-
+a {
+  color: inherit;
+  text-decoration: none;
+}
 p {
   cursor: pointer;
     text-align: center;
