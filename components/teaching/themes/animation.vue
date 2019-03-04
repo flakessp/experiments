@@ -1,10 +1,14 @@
 <template>
     <div class="container">
         <h1 id="t-position">Анимация</h1>
-        <pen>
-            <iframe height="530" style="width: 500px;" scrolling="no" title="CMY/CMYK Color printing with background-blend-mode" src="//codepen.io/nathantaylor/embed/xgazdX/?height=530&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true"/>
-        </pen>
         <h2>Transition</h2>
+        <p>Первое, что можно сделать — это задать автомическую анимацию при изменении любого из свойств.</p>
+        <p>Например при :hover</p>
+        <p><pre><code>.css 
+            {
+                hover: hi
+            }
+        </code></pre></p>
         <p>Примеры каждого из свойств и сокращенная форма</p>
         <h2>Keyframes</h2>
         <p>from to - примеры кода</p>
@@ -23,3 +27,26 @@ export default {
   components: {Pen}
 }
 </script>
+
+<style lang="scss" scoped>
+@font-face {
+    font-family: 'druk';
+    src: url('/fonts/druk_super_italic.woff') format('woff');
+}
+.container {
+    padding: 0;
+    font-size: 2em;
+}
+p {
+    font-size: .5em;
+}
+h1, h2, h3 {
+    font-family: 'druk';
+    color: #E64A69;
+    margin-left: -1em;
+}
+h2 {
+    margin-bottom: .5em;
+    margin-top: .1em;
+}
+</style>

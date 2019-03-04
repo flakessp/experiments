@@ -7,7 +7,6 @@
     <javascript/>
     <t-production/>
     <task-sampler/>
-
   </slide>  
 </template>
 
@@ -17,7 +16,6 @@
   padding: 1em;
   border: 1px solid black;
 }
-
 
 h1, h2 {
   margin: .5em 0;
